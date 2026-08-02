@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live Caption — 支持 / Support</title>
+<style>
+  :root { color-scheme: light dark; --fg:#1c1c1e; --dim:#6c6c70; --bg:#fff; --line:#e5e5ea; --accent:#0a84ff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#f2f2f7; --dim:#9b9ba0; --bg:#000; --line:#2c2c2e; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; padding: 40px 22px 80px; max-width: 46rem;
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--fg); background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+  }
+  h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 .15em; letter-spacing: -.02em; }
+  h2 { font-size: 1.35rem; margin: 2.4em 0 .6em; padding-top: 1.2em; border-top: 1px solid var(--line); }
+  h3 { font-size: 1.06rem; margin: 1.8em 0 .4em; }
+  p, li { margin: .7em 0; }
+  ul, ol { padding-left: 1.3em; }
+  a { color: var(--accent); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .88em;
+    background: color-mix(in srgb, var(--fg) 8%, transparent);
+    padding: .15em .4em; border-radius: 4px;
+  }
+  .tagline { font-size: 1.15rem; color: var(--dim); margin: 0 0 2em; }
+  .note {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    border-radius: 10px; padding: .9em 1.1em; margin: 1.4em 0;
+  }
+  .note p:first-child { margin-top: 0; } .note p:last-child { margin-bottom: 0; }
+  footer { margin-top: 4em; padding-top: 1.5em; border-top: 1px solid var(--line); color: var(--dim); font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<h1>Live Caption</h1>
+<p class="tagline">给其他 App 里播放的声音加实时翻译字幕，字幕浮在最上层。<br>
+Live translated subtitles for audio playing in other apps, floating on top.</p>
+
+<h2>中文</h2>
+
+<h3>需要什么</h3>
+<ul>
+  <li>iPhone，iOS 26 或更新版本</li>
+  <li>首次使用某种语言时需要联网下载一次模型，之后完全离线</li>
+</ul>
+
+<h3>怎么用</h3>
+<ol>
+  <li><strong>选好语言。</strong>上面两个菜单分别是「视频在说什么」和「字幕显示成什么」。</li>
+  <li><strong>开始屏幕广播。</strong>iOS 会弹出一个<strong>系统面板</strong>，在里面选「Live Caption」再点「开始直播」。这是 iOS 上唯一能拿到其他 App 声音的方式。</li>
+  <li><strong>打开字幕悬浮窗</strong>，然后切到 Safari 播放视频。字幕会一直浮在画面上，可以拖动和缩放。</li>
+</ol>
+<div class="note">
+  <p>顺序不能反：先广播，再开悬浮窗。悬浮窗要等广播送来声音才有内容。</p>
+</div>
+
+<h3>免费次数和购买</h3>
+<ul>
+  <li>新用户有 <strong>3 次</strong>免费字幕，用完后<strong>每周会再送 1 次</strong>。</li>
+  <li><strong>字幕真正出现才算一次</strong>——手滑点开悬浮窗又关掉不扣次。</li>
+  <li>一次会话<strong>中途绝不会被打断</strong>，看多久都算同一次。</li>
+  <li>想不再计次，可以在 App 里选按月订阅、按年订阅，或一次性终身解锁。</li>
+</ul>
+
+<h3>换了手机 / 重装了 App</h3>
+<p>打开 App 底部的解锁页面，点<strong>「恢复购买」</strong>，用当初购买时的同一个 Apple 账户登录即可。</p>
+
+<h3>怎么取消订阅</h3>
+<p>订阅由 Apple 管理，不在本 App 内取消：打开<strong>「设置」→ 点最上方你的名字 → 订阅</strong>，选择 Live Caption 后取消。终身解锁是一次性买断，不会续订，无需取消。</p>
+
+<h3>没有字幕出来？</h3>
+<ul>
+  <li>先看 App 主界面的状态行——它会写明当前卡在哪一步（模型还在下载、语言包还没装、广播没在跑）。</li>
+  <li>确认视频<strong>没有静音</strong>，且音量不是最小。</li>
+  <li>确认状态栏有<strong>红色录制指示</strong>，代表屏幕广播确实在运行。</li>
+  <li>换过「视频在说什么」这个语言后<strong>必须重新开始屏幕广播</strong>才生效；字幕语言可以随时换。</li>
+  <li>某些语言组合这台设备可能不支持，App 会直接提示你换一种组合。</li>
+</ul>
+
+<h3>联系</h3>
+<p>问题、建议、报 bug：<code>&lt;在此填入支持邮箱&gt;</code></p>
+
+<h2>English</h2>
+
+<h3>Requirements</h3>
+<ul>
+  <li>iPhone running iOS 26 or later</li>
+  <li>A network connection the first time you use a language, to download its model once. Fully offline afterwards.</li>
+</ul>
+
+<h3>How to use it</h3>
+<ol>
+  <li><strong>Pick your languages.</strong> The two menus are the language being spoken and the language you want subtitles in.</li>
+  <li><strong>Start Screen Broadcast.</strong> iOS shows <strong>its own sheet</strong> — choose "Live Caption" there and tap Start Broadcast. It is the only way an app can receive audio from other apps on iOS.</li>
+  <li><strong>Open Subtitle Window</strong>, then switch to Safari and play a video. The subtitles stay on top and can be dragged and resized.</li>
+</ol>
+<div class="note">
+  <p>The order matters: broadcast first, then the subtitle window. The window has nothing to show until the broadcast is feeding it audio.</p>
+</div>
+
+<h3>Free sessions and purchases</h3>
+<ul>
+  <li>A new install gets <strong>3 free captioning sessions</strong>, and <strong>one more every week</strong> after those run out.</li>
+  <li><strong>A session only counts once captions actually appear</strong> — opening the window by mistake and closing it costs nothing.</li>
+  <li>A session is <strong>never cut short</strong>. Watch for as long as you like; it stays one session.</li>
+  <li>To remove the limit, the app offers a monthly subscription, a yearly subscription, or a one-time lifetime unlock.</li>
+</ul>
+
+<h3>New phone, or reinstalled the app</h3>
+<p>Open the unlock screen at the bottom of the app and tap <strong>Restore Purchases</strong>, signed in with the same Apple Account you bought with.</p>
+
+<h3>Cancelling a subscription</h3>
+<p>Subscriptions are managed by Apple, not inside this app: open <strong>Settings → tap your name at the top → Subscriptions</strong>, then select Live Caption and cancel. The lifetime unlock is a one-time purchase, never renews, and needs no cancelling.</p>
+
+<h3>No subtitles appearing?</h3>
+<ul>
+  <li>Check the status line on the app's main screen — it says exactly which stage is pending (model downloading, language pack missing, broadcast not running).</li>
+  <li>Make sure the video is <strong>not muted</strong> and the volume is up.</li>
+  <li>Look for the <strong>red recording indicator</strong> in the status bar, which means the screen broadcast really is running.</li>
+  <li>Changing the spoken language <strong>requires restarting the screen broadcast</strong>. The subtitle language can be changed at any time.</li>
+  <li>Some language combinations aren't available on a given device; the app will tell you and ask you to pick another.</li>
+</ul>
+
+<h3>Contact</h3>
+<p>Questions, suggestions, bug reports: <code>&lt;your support email here&gt;</code></p>
+
+<footer><a href="privacy.html">隐私政策 / Privacy Policy</a></footer>
+
+</body>
+</html>
