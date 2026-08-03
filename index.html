@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Live Caption — 支持 / Support</title>
+<title>实时译字幕君 / Live Caption — 支持 / Support</title>
 <style>
   :root { color-scheme: light dark; --fg:#1c1c1e; --dim:#6c6c70; --bg:#fff; --line:#e5e5ea; --accent:#0a84ff; }
   @media (prefers-color-scheme: dark) {
@@ -39,8 +39,8 @@
 </head>
 <body>
 
-<h1>Live Caption</h1>
-<p class="tagline">给其他 App 里播放的声音加实时翻译字幕，字幕浮在最上层。<br>
+<h1>实时译字幕君 · Live Caption</h1>
+<p class="tagline">你的专属智能翻译字幕组——给别的 App 里的声音配上实时字幕，字幕浮在最上层。<br>
 Live translated subtitles for audio playing in other apps, floating on top.</p>
 
 <h2>中文</h2>
@@ -54,11 +54,11 @@ Live translated subtitles for audio playing in other apps, floating on top.</p>
 <h3>怎么用</h3>
 <ol>
   <li><strong>选好语言。</strong>上面两个菜单分别是「视频在说什么」和「字幕显示成什么」。</li>
-  <li><strong>开始屏幕广播。</strong>iOS 会弹出一个<strong>系统面板</strong>，在里面选「Live Caption」再点「开始直播」。这是 iOS 上唯一能拿到其他 App 声音的方式。</li>
-  <li><strong>打开字幕悬浮窗</strong>，然后切到 Safari 播放视频。字幕会一直浮在画面上，可以拖动和缩放。</li>
+  <li><strong>开始共享声音。</strong>iOS 会弹出一个<strong>系统面板</strong>，在里面点「开始共享」。这是 iOS 上唯一能拿到其他 App 声音的方式。</li>
+  <li><strong>打开字幕悬浮窗</strong>，然后切到播放视频的浏览器或 App。字幕会一直更新在悬浮窗中，可以拖动或缩放。</li>
 </ol>
 <div class="note">
-  <p>顺序不能反：先广播，再开悬浮窗。悬浮窗要等广播送来声音才有内容。</p>
+  <p>顺序不能反：先共享声音，再开悬浮窗——悬浮窗要等声音送进来才有内容，所以 App 里也是共享开始之后才会出现第二个按钮。</p>
 </div>
 
 <h3>免费次数和购买</h3>
@@ -73,14 +73,14 @@ Live translated subtitles for audio playing in other apps, floating on top.</p>
 <p>打开 App 底部的解锁页面，点<strong>「恢复购买」</strong>，用当初购买时的同一个 Apple 账户登录即可。</p>
 
 <h3>怎么取消订阅</h3>
-<p>订阅由 Apple 管理，不在本 App 内取消：打开<strong>「设置」→ 点最上方你的名字 → 订阅</strong>，选择 Live Caption 后取消。终身解锁是一次性买断，不会续订，无需取消。</p>
+<p>订阅由 Apple 管理，不在本 App 内取消：打开<strong>「设置」→ 点最上方你的名字 → 订阅</strong>，选择「实时译字幕君」后取消。终身解锁是一次性买断，不会续订，无需取消。</p>
 
 <h3>没有字幕出来？</h3>
 <ul>
-  <li>先看 App 主界面的状态行——它会写明当前卡在哪一步（模型还在下载、语言包还没装、广播没在跑）。</li>
+  <li>先看 App 主界面中间那张卡片——它会写明当前卡在哪一步（模型还在下载、语言包还没装、声音没在共享）。</li>
   <li>确认视频<strong>没有静音</strong>，且音量不是最小。</li>
-  <li>确认状态栏有<strong>红色录制指示</strong>，代表屏幕广播确实在运行。</li>
-  <li>换过「视频在说什么」这个语言后<strong>必须重新开始屏幕广播</strong>才生效；字幕语言可以随时换。</li>
+  <li>确认状态栏有<strong>红色录制指示</strong>，代表声音确实在共享。</li>
+  <li>换过「视频语言」之后<strong>必须重新开始共享声音</strong>才生效；字幕语言可以随时换。</li>
   <li>某些语言组合这台设备可能不支持，App 会直接提示你换一种组合。</li>
 </ul>
 
@@ -98,11 +98,11 @@ Live translated subtitles for audio playing in other apps, floating on top.</p>
 <h3>How to use it</h3>
 <ol>
   <li><strong>Pick your languages.</strong> The two menus are the language being spoken and the language you want subtitles in.</li>
-  <li><strong>Start Screen Broadcast.</strong> iOS shows <strong>its own sheet</strong> — choose "Live Caption" there and tap Start Broadcast. It is the only way an app can receive audio from other apps on iOS.</li>
-  <li><strong>Open Subtitle Window</strong>, then switch to Safari and play a video. The subtitles stay on top and can be dragged and resized.</li>
+  <li><strong>Start Sharing Audio.</strong> iOS shows <strong>its own Screen Sharing sheet</strong> — tap Start Sharing there. It is the only way an app can receive audio from other apps on iOS.</li>
+  <li><strong>Open Subtitle Window</strong>, then switch to the browser or app playing your video. The subtitles keep updating in the floating window, which you can drag and resize.</li>
 </ol>
 <div class="note">
-  <p>The order matters: broadcast first, then the subtitle window. The window has nothing to show until the broadcast is feeding it audio.</p>
+  <p>The order matters: share the audio first, then open the subtitle window — the window has nothing to show until audio is reaching it, which is why the app only offers the second button once sharing is running.</p>
 </div>
 
 <h3>Free sessions and purchases</h3>
@@ -121,10 +121,10 @@ Live translated subtitles for audio playing in other apps, floating on top.</p>
 
 <h3>No subtitles appearing?</h3>
 <ul>
-  <li>Check the status line on the app's main screen — it says exactly which stage is pending (model downloading, language pack missing, broadcast not running).</li>
+  <li>Check the card in the middle of the app's main screen — it says exactly which stage is pending (model downloading, language pack missing, audio not being shared).</li>
   <li>Make sure the video is <strong>not muted</strong> and the volume is up.</li>
-  <li>Look for the <strong>red recording indicator</strong> in the status bar, which means the screen broadcast really is running.</li>
-  <li>Changing the spoken language <strong>requires restarting the screen broadcast</strong>. The subtitle language can be changed at any time.</li>
+  <li>Look for the <strong>red recording indicator</strong> in the status bar, which means audio really is being shared.</li>
+  <li>Changing the spoken language <strong>requires starting audio sharing again</strong>. The subtitle language can be changed at any time.</li>
   <li>Some language combinations aren't available on a given device; the app will tell you and ask you to pick another.</li>
 </ul>
 
