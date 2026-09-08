@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>リアルタイム翻訳字幕 · 他のアプリの音声にリアルタイム字幕 — 使い方とサポート</title>
+<meta name="description" content="iPhone で、他のアプリが再生している動画・生配信・ポッドキャストにリアルタイムの翻訳字幕を重ねます。字幕は最前面に浮くので、見ているアプリから離れる必要がありません。認識も翻訳も端末内で完結します。iOS 26 以降が必要です。">
+<link rel="alternate" hreflang="en" href="https://claudwang.github.io/livecaption/">
+<link rel="alternate" hreflang="zh-Hans" href="https://claudwang.github.io/livecaption/zh.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://claudwang.github.io/livecaption/zh-hant.html">
+<link rel="alternate" hreflang="ja" href="https://claudwang.github.io/livecaption/ja.html">
+<link rel="alternate" hreflang="ko" href="https://claudwang.github.io/livecaption/ko.html">
+<link rel="alternate" hreflang="es" href="https://claudwang.github.io/livecaption/es.html">
+<link rel="alternate" hreflang="pt" href="https://claudwang.github.io/livecaption/pt.html">
+<link rel="alternate" hreflang="x-default" href="https://claudwang.github.io/livecaption/">
+<style>
+  :root { color-scheme: light dark; --fg:#1c1c1e; --dim:#6c6c70; --bg:#fff; --line:#e5e5ea; --accent:#0a84ff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#f2f2f7; --dim:#9b9ba0; --bg:#000; --line:#2c2c2e; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; padding: 40px 22px 80px; max-width: 46rem;
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--fg); background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+  }
+  h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 .15em; letter-spacing: -.02em; }
+  h2 { font-size: 1.35rem; margin: 2.4em 0 .6em; padding-top: 1.2em; border-top: 1px solid var(--line); }
+  h3 { font-size: 1.06rem; margin: 1.8em 0 .4em; }
+  p, li { margin: .7em 0; }
+  ul, ol { padding-left: 1.3em; }
+  a { color: var(--accent); }
+  .tagline { font-size: 1.15rem; color: var(--dim); margin: 0 0 1.6em; }
+  .langbar { font-size: .92rem; color: var(--dim); margin: 0 0 2.2em; padding-bottom: 1.2em; border-bottom: 1px solid var(--line); }
+  .langbar a { margin-right: .9em; white-space: nowrap; }
+  .langbar strong { margin-right: .9em; color: var(--fg); font-weight: 600; }
+  .note {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    border-radius: 10px; padding: .9em 1.1em; margin: 1.4em 0;
+  }
+  .note p:first-child { margin-top: 0; } .note p:last-child { margin-bottom: 0; }
+  footer { margin-top: 4em; padding-top: 1.5em; border-top: 1px solid var(--line); color: var(--dim); font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<h1>リアルタイム翻訳字幕</h1>
+<p class="tagline">他のアプリで再生中の音声に、リアルタイムの字幕を最前面で重ねます。</p>
+<p class="langbar"><a href="index.html">English</a><a href="zh.html">简体中文</a><a href="zh-hant.html">繁體中文</a><strong>日本語</strong><a href="ko.html">한국어</a><a href="es.html">Español</a><a href="pt.html">Português</a></p>
+<h3>こんなときに使えます</h3>
+
+<p><strong>字幕がない映像を見るとき</strong></p>
+<ul>
+  <li>海外ドラマやアニメの「生」の映像で、音声しかないもの</li>
+  <li>YouTube や Safari で見る外国語の動画に、読める言語の字幕がないとき</li>
+</ul>
+
+<p><strong>生配信——この種の内容に字幕が付くことはありません</strong></p>
+<ul>
+  <li>推しのライブ配信、配信者の生放送。誰も事前に字幕を用意できません</li>
+  <li>スポーツの実況、発表会、ライブコマース</li>
+  <li>生配信はその場で起きているものです。<strong>どんな字幕グループも先回りできない</strong>——ここがアーカイブ作品との決定的な違いです</li>
+</ul>
+
+<p><strong>映像のない音声</strong></p>
+<ul>
+  <li>外国語のポッドキャスト、オーディオブック、インタビュー。画面は関係ありません。扱うのは音です</li>
+</ul>
+
+<p><strong>学習と仕事</strong></p>
+<ul>
+  <li>外国語のオンライン授業、公開講座、学術講演</li>
+  <li>外国語のオンライン会議や説明会</li>
+</ul>
+
+<p><strong>できること：</strong>他のアプリが再生している音声をその場で文字にして翻訳し、見ている画面の上に字幕を浮かせます。見ているアプリから離れる必要も、字幕ファイルを用意する必要もありません。</p>
+
+<p><strong>できないこと</strong>（よく混同されます）：</p>
+<ul>
+  <li>自分で撮った動画に字幕を焼き込む編集アプリではありません</li>
+  <li>動画や音声のダウンロード・保存・書き出しは一切しません</li>
+  <li>ウェブページや画像の文字は翻訳しません。扱うのは音だけです</li>
+  <li>Mac では使えません。iOS の画面共有の仕組みが macOS にはないためです</li>
+</ul>
+
+<h3>必要なもの</h3>
+<ul>
+  <li>iPhone、iOS 26 以降</li>
+  <li>ある言語を初めて使うときだけ、モデルを一度ダウンロードするための通信。その後は完全にオフラインで動きます</li>
+</ul>
+
+<h3>他のアプリの動画に字幕を出す手順</h3>
+<ol>
+  <li><strong>言語を選びます。</strong>上の 2 つのメニューは「話されている言語」と「字幕にしたい言語」です。</li>
+  <li><strong>中央の丸いボタン「音声の共有を開始」をタップ。</strong>iOS が<strong>システムのシート</strong>を表示するので、そこで「共有を開始」をタップします。他のアプリの音声を受け取れる方法は iOS ではこれだけです。</li>
+  <li><strong>字幕ウインドウが自分で浮かび上がるのを待って</strong>、動画を再生するブラウザやアプリに切り替えます。字幕は浮いたウインドウで更新され続け、ドラッグやサイズ変更ができます。</li>
+</ol>
+<div class="note">
+<p>ウインドウは自分で開く必要はありません。音声の共有が実際に始まると、アプリが開きます。音が届くまで表示するものがないため、この順番は固定です。</p>
+<p>システムにウインドウを閉じられた場合——iOS は同時に 1 つのピクチャ・イン・ピクチャしか許さないため、他のアプリが自分の PiP を開くと奪われます——音声の共有は続いており、ボタンが「字幕ウインドウを開く」に変わります。一度タップすれば戻ります。</p>
+</div>
+
+<h3>3 つの字幕スタイルの選び方</h3>
+<p>言語メニューの下が「字幕スタイル」です。ショート、ロング、スリムの 3 つで、それぞれ浮かぶウインドウの形をそのまま描いています。既定は中央のロングで、原文と訳文を同時に表示します。他の 2 つは訳文だけです。一度変更すると記憶されます。ウインドウが開いている間はスタイルを変更できず、その行はグレーになります。先にウインドウを閉じてください。</p>
+
+<h3>無料回数の数え方と、制限の外し方</h3>
+<ul>
+  <li>インストール直後は 3 回分の無料字幕が使えます。使い切ったあとは毎週 1 回ずつ追加されます。</li>
+  <li>字幕が実際に表示されて初めて 1 回と数えます。誤ってウインドウを開いて閉じただけでは減りません。</li>
+  <li>始まったセッションが途中で打ち切られることはありません。どれだけ長く見ても 1 回のままです。</li>
+  <li>制限をなくすには、月額、年額、または買い切りの永久解除から選べます。</li>
+</ul>
+
+<h3>機種変更・再インストール後に購入を復元する</h3>
+<p>アプリ右上の歯車から設定を開き、「購入を復元」をタップします。購入時と同じ Apple アカウントでサインインしてください。</p>
+
+<h3>サブスクリプションの解約</h3>
+<p>サブスクリプションは Apple が管理しており、アプリ内では解約できません。「設定」&rarr; 一番上のご自身の名前 &rarr; サブスクリプション を開き、対象を選んで解約してください。買い切りの永久解除は更新されないため、解約は不要です。</p>
+
+<h3>字幕が出ないときの確認</h3>
+<ul>
+  <li>まずメイン画面の大きいボタンの上にある状態表示を見てください。どの段階で止まっているか（モデルのダウンロード中、言語パック未インストール、音声が共有されていない）が書かれます。何も出ていなければ、あなたの側でやることはありません。</li>
+  <li>動画がミュートになっていないか、音量が最小になっていないか確認してください。</li>
+  <li>ステータスバーに赤い録画インジケータが出ていれば、音声は実際に共有されています。</li>
+  <li>「話されている言語」を変えた場合は、音声の共有を開始し直す必要があります。字幕の言語はいつでも変更できます。</li>
+  <li>認識は音から行うため、BGM が大きい、複数人が同時に話すといった場面では精度が明らかに落ちます。</li>
+  <li>端末によっては対応していない言語の組み合わせがあります。その場合はアプリが別の組み合わせを選ぶよう案内します。</li>
+</ul>
+
+<h3>お問い合わせ</h3>
+<p>ご質問、ご要望、不具合のご報告：<a href="mailto:livecaptiondev@gmail.com">livecaptiondev@gmail.com</a></p>
+<footer><a href="privacy.html">プライバシーポリシー</a></footer>
+
+</body>
+</html>

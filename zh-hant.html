@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>即時翻譯字幕 · 為其他 App 加上即時翻譯字幕 — 使用說明與支援</title>
+<meta name="description" content="在 iPhone 上為其他 App 正在播放的影片、直播與 Podcast 加上即時翻譯字幕，字幕浮在最上層，不必離開正在看的那個 App。辨識與翻譯都在裝置上完成，不會上傳。需要 iOS 26 或更新版本。">
+<link rel="alternate" hreflang="en" href="https://claudwang.github.io/livecaption/">
+<link rel="alternate" hreflang="zh-Hans" href="https://claudwang.github.io/livecaption/zh.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://claudwang.github.io/livecaption/zh-hant.html">
+<link rel="alternate" hreflang="ja" href="https://claudwang.github.io/livecaption/ja.html">
+<link rel="alternate" hreflang="ko" href="https://claudwang.github.io/livecaption/ko.html">
+<link rel="alternate" hreflang="es" href="https://claudwang.github.io/livecaption/es.html">
+<link rel="alternate" hreflang="pt" href="https://claudwang.github.io/livecaption/pt.html">
+<link rel="alternate" hreflang="x-default" href="https://claudwang.github.io/livecaption/">
+<style>
+  :root { color-scheme: light dark; --fg:#1c1c1e; --dim:#6c6c70; --bg:#fff; --line:#e5e5ea; --accent:#0a84ff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#f2f2f7; --dim:#9b9ba0; --bg:#000; --line:#2c2c2e; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; padding: 40px 22px 80px; max-width: 46rem;
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--fg); background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+  }
+  h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 .15em; letter-spacing: -.02em; }
+  h2 { font-size: 1.35rem; margin: 2.4em 0 .6em; padding-top: 1.2em; border-top: 1px solid var(--line); }
+  h3 { font-size: 1.06rem; margin: 1.8em 0 .4em; }
+  p, li { margin: .7em 0; }
+  ul, ol { padding-left: 1.3em; }
+  a { color: var(--accent); }
+  .tagline { font-size: 1.15rem; color: var(--dim); margin: 0 0 1.6em; }
+  .langbar { font-size: .92rem; color: var(--dim); margin: 0 0 2.2em; padding-bottom: 1.2em; border-bottom: 1px solid var(--line); }
+  .langbar a { margin-right: .9em; white-space: nowrap; }
+  .langbar strong { margin-right: .9em; color: var(--fg); font-weight: 600; }
+  .note {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    border-radius: 10px; padding: .9em 1.1em; margin: 1.4em 0;
+  }
+  .note p:first-child { margin-top: 0; } .note p:last-child { margin-bottom: 0; }
+  footer { margin-top: 4em; padding-top: 1.5em; border-top: 1px solid var(--line); color: var(--dim); font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<h1>即時翻譯字幕</h1>
+<p class="tagline">為其他 App 裡的聲音配上即時字幕，字幕浮在最上層。</p>
+<p class="langbar"><a href="index.html">English</a><a href="zh.html">简体中文</a><strong>繁體中文</strong><a href="ja.html">日本語</a><a href="ko.html">한국어</a><a href="es.html">Español</a><a href="pt.html">Português</a></p>
+<h3>什麼時候用得到</h3>
+
+<p><strong>看沒有字幕的片源</strong></p>
+<ul>
+  <li>日劇、韓劇、動畫的生肉片源，只有原音沒有字幕</li>
+  <li>在 YouTube、Safari 裡看外語影片，沒有中文字幕</li>
+</ul>
+
+<p><strong>看直播——這類內容不可能有字幕</strong></p>
+<ul>
+  <li>追星：韓國偶像的直播、實況主開台，講什麼全靠聽</li>
+  <li>體育賽事轉播、發表會、開箱直播</li>
+  <li>直播是即時發生的，<strong>沒有任何字幕組能事先做好</strong>，這是它和隨選內容最本質的差別</li>
+</ul>
+
+<p><strong>只有聲音的內容</strong></p>
+<ul>
+  <li>外語 Podcast、有聲書、訪談節目——沒有畫面也一樣，它處理的是聲音不是畫面</li>
+</ul>
+
+<p><strong>學習與工作</strong></p>
+<ul>
+  <li>外語線上課程、公開課、學術演講</li>
+  <li>外語的線上會議、說明會</li>
+</ul>
+
+<p><strong>它做的事：</strong>把其他 App 正在播放的聲音即時轉成文字並翻譯，字幕浮在螢幕最上層。你不必離開正在看的那個 App，也不必事先準備字幕檔。</p>
+
+<p><strong>它不做的事</strong>（這幾點很常被搞混）：</p>
+<ul>
+  <li>不是替你自己拍的影片加字幕的剪輯工具</li>
+  <li>不下載、不儲存、不匯出任何影片或音訊</li>
+  <li>不翻譯網頁文字或圖片，只處理聲音</li>
+  <li>不能在 Mac 上使用——iOS 的螢幕分享機制在 macOS 上無法運作</li>
+</ul>
+
+<h3>需要什麼裝置和系統</h3>
+<ul>
+  <li>iPhone，iOS 26 或更新版本</li>
+  <li>首次使用某種語言時需要連網下載一次模型，之後完全離線</li>
+</ul>
+
+<h3>怎麼為其他 App 裡的影片加上即時字幕</h3>
+<ol>
+  <li><strong>先選語言。</strong>上面兩個選單分別是「影片在說什麼」和「字幕顯示成什麼」。</li>
+  <li><strong>點中間那個大按鈕「開始分享音訊」。</strong>iOS 會跳出一個<strong>系統面板</strong>，在裡面點「開始分享」。這是 iOS 上唯一能取得其他 App 聲音的方式。</li>
+  <li><strong>等字幕浮動視窗自己浮起來</strong>，再切到播放影片的瀏覽器或 App。字幕會持續更新，視窗可以拖曳和縮放。</li>
+</ol>
+<div class="note">
+<p>浮動視窗不必自己開：音訊分享真正開始之後，App 會替你打開它。視窗要等聲音送進來才有內容，所以這個順序是固定的。</p>
+<p>如果浮動視窗被系統關掉了——iOS 同一時間只允許一個子母畫面，別的 App 開了自己的子母畫面就會頂掉它——音訊分享不受影響，主畫面會出現「打開字幕浮動視窗」按鈕，點一下就回來。</p>
+</div>
+
+<h3>三種字幕樣式怎麼選</h3>
+<p>語言選單下面是「字幕樣式」：短句模式、長句模式、窄條模式，畫的就是三種浮動視窗的形狀。預設是中間的長句模式，它會把原文和譯文一起顯示，另外兩種只顯示譯文。換過一次之後，App 會記住你的選擇。浮動視窗開著的時候不能換樣式，那一列會變灰——先關掉視窗再換。</p>
+
+<h3>免費次數怎麼算，怎麼解除限制</h3>
+<ul>
+  <li>新使用者有 3 次免費字幕，用完後每週會再送 1 次。</li>
+  <li>字幕真正出現才算一次——不小心點開視窗又關掉不會扣次。</li>
+  <li>一次工作階段中途絕不會被打斷，看多久都算同一次。</li>
+  <li>想不再計次，可以在 App 裡選按月訂閱、按年訂閱，或一次性終身解鎖。</li>
+</ul>
+
+<h3>換了手機或重裝 App，買過的怎麼恢復</h3>
+<p>點 App 右上角的齒輪打開設定，點「恢復購買」，用當初購買時的同一個 Apple 帳號登入即可。</p>
+
+<h3>怎麼取消訂閱</h3>
+<p>訂閱由 Apple 管理，不在本 App 內取消：打開「設定」&rarr; 點最上方你的名字 &rarr; 訂閱，選擇「即時翻譯字幕」後取消。終身解鎖是一次性買斷，不會續訂，無需取消。</p>
+
+<h3>字幕出不來，怎麼排查</h3>
+<ul>
+  <li>先看主畫面大按鈕上方那行狀態文字——卡在哪一步它會寫出來（模型還在下載、語言包還沒裝好、音訊沒在分享）。沒有那行字就表示沒有需要你處理的事。</li>
+  <li>確認影片沒有靜音，音量不是最小。</li>
+  <li>確認狀態列有紅色錄製指示，代表音訊確實在分享。</li>
+  <li>換過「影片語言」之後必須重新開始分享音訊才會生效；字幕語言可以隨時換。</li>
+  <li>語音辨識是根據聲音進行的，背景音樂很大、多人同時說話時準確度會明顯下降。</li>
+  <li>某些語言組合這台裝置可能不支援，App 會直接提示你換一種組合。</li>
+</ul>
+
+<h3>聯絡</h3>
+<p>問題、建議、回報 bug：<a href="mailto:livecaptiondev@gmail.com">livecaptiondev@gmail.com</a></p>
+<footer><a href="privacy.html">隱私權政策</a></footer>
+
+</body>
+</html>

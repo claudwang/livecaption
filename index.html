@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>实时翻译字幕 / Realtime Subtitles — 支持 / Support</title>
+<title>Realtime Subtitles — live translated subtitles for any other app</title>
+<meta name="description" content="Put live translated subtitles on video, live streams and podcasts playing in other apps on iPhone. The subtitles float on top, so you never leave the app you are watching. Recognition and translation run on the device. Requires iOS 26 or later.">
+<link rel="alternate" hreflang="en" href="https://claudwang.github.io/livecaption/">
+<link rel="alternate" hreflang="zh-Hans" href="https://claudwang.github.io/livecaption/zh.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://claudwang.github.io/livecaption/zh-hant.html">
+<link rel="alternate" hreflang="ja" href="https://claudwang.github.io/livecaption/ja.html">
+<link rel="alternate" hreflang="ko" href="https://claudwang.github.io/livecaption/ko.html">
+<link rel="alternate" hreflang="es" href="https://claudwang.github.io/livecaption/es.html">
+<link rel="alternate" hreflang="pt" href="https://claudwang.github.io/livecaption/pt.html">
+<link rel="alternate" hreflang="x-default" href="https://claudwang.github.io/livecaption/">
 <style>
   :root { color-scheme: light dark; --fg:#1c1c1e; --dim:#6c6c70; --bg:#fff; --line:#e5e5ea; --accent:#0a84ff; }
   @media (prefers-color-scheme: dark) {
@@ -23,12 +32,10 @@
   p, li { margin: .7em 0; }
   ul, ol { padding-left: 1.3em; }
   a { color: var(--accent); }
-  code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .88em;
-    background: color-mix(in srgb, var(--fg) 8%, transparent);
-    padding: .15em .4em; border-radius: 4px;
-  }
-  .tagline { font-size: 1.15rem; color: var(--dim); margin: 0 0 2em; }
+  .tagline { font-size: 1.15rem; color: var(--dim); margin: 0 0 1.6em; }
+  .langbar { font-size: .92rem; color: var(--dim); margin: 0 0 2.2em; padding-bottom: 1.2em; border-bottom: 1px solid var(--line); }
+  .langbar a { margin-right: .9em; white-space: nowrap; }
+  .langbar strong { margin-right: .9em; color: var(--fg); font-weight: 600; }
   .note {
     background: color-mix(in srgb, var(--accent) 10%, transparent);
     border-radius: 10px; padding: .9em 1.1em; margin: 1.4em 0;
@@ -39,107 +46,92 @@
 </head>
 <body>
 
-<h1>实时翻译字幕 · Realtime Subtitles</h1>
-<p class="tagline">你的专属智能翻译字幕组——给别的 App 里的声音配上实时字幕，字幕浮在最上层。<br>
-Live translated subtitles for audio playing in other apps, floating on top.</p>
+<h1>Realtime Subtitles</h1>
+<p class="tagline">Live translated subtitles for audio playing in other apps, floating on top.</p>
+<p class="langbar"><strong>English</strong><a href="zh.html">简体中文</a><a href="zh-hant.html">繁體中文</a><a href="ja.html">日本語</a><a href="ko.html">한국어</a><a href="es.html">Español</a><a href="pt.html">Português</a></p>
+<h3>When you'd use it</h3>
 
-<h2>中文</h2>
-
-<h3>需要什么</h3>
+<p><strong>Watching something that has no subtitles</strong></p>
 <ul>
-  <li>iPhone，iOS 26 或更新版本</li>
-  <li>首次使用某种语言时需要联网下载一次模型，之后完全离线</li>
+  <li>Japanese, Korean or Chinese drama and anime raws, where the source is audio only</li>
+  <li>Foreign-language video on YouTube or in Safari with no subtitles in a language you read</li>
 </ul>
 
-<h3>怎么用</h3>
-<ol>
-  <li><strong>选好语言。</strong>上面两个菜单分别是「视频在说什么」和「字幕显示成什么」。</li>
-  <li><strong>点中间那个大按钮「开始共享音频」。</strong>iOS 会弹出一个<strong>系统面板</strong>，在里面点「开始共享」。这是 iOS 上唯一能拿到其他 App 声音的方式。</li>
-  <li><strong>等字幕悬浮窗自己浮起来</strong>，然后切到播放视频的浏览器或 App。字幕会一直更新在悬浮窗中，可以拖动或缩放。</li>
-</ol>
-<div class="note">
-  <p>悬浮窗不用自己开：音频共享真正开始之后，App 会替你打开它。悬浮窗要等声音送进来才有内容，所以这个顺序是固定的。</p>
-  <p>如果悬浮窗被系统关掉了——iOS 同一时刻只允许一个画中画，别的 App 开了自己的画中画就会顶掉它，换字幕语言也会——音频共享不受影响，主界面会出现<strong>「打开字幕悬浮窗」</strong>按钮，点一下就回来。</p>
-</div>
-
-<h3>三种字幕样式</h3>
-<p>语言菜单下面是<strong>「字幕样式」</strong>：短句模式、长句模式、窄条模式，画的就是三种悬浮窗的形状。<strong>默认是中间的长句模式</strong>，它会把原文和译文一起显示，另外两种只显示译文。换过一次之后，App 会记住你的选择。<strong>悬浮窗开着的时候不能换样式</strong>，那一栏会变灰——先关掉悬浮窗再换。</p>
-
-<h3>免费次数和购买</h3>
+<p><strong>Live streams — this kind of content can never have subtitles</strong></p>
 <ul>
-  <li>新用户有 <strong>3 次</strong>免费字幕，用完后<strong>每周会再送 1 次</strong>。</li>
-  <li><strong>字幕真正出现才算一次</strong>——手滑点开悬浮窗又关掉不扣次。</li>
-  <li>一次会话<strong>中途绝不会被打断</strong>，看多久都算同一次。</li>
-  <li>想不再计次，可以在 App 里选按月订阅、按年订阅，或一次性终身解锁。</li>
+  <li>Idol and creator live streams: nobody can subtitle them in advance</li>
+  <li>Sports commentary, keynotes, live shopping</li>
+  <li>A live stream happens as it happens. <strong>No subtitling group can prepare one ahead of time</strong>, which is what separates it from anything on demand.</li>
 </ul>
 
-<h3>换了手机 / 重装了 App</h3>
-<p>点 App 右上角的齿轮打开<strong>设置</strong>，点<strong>「恢复购买」</strong>，用当初购买时的同一个 Apple 账户登录即可。</p>
-
-<h3>怎么取消订阅</h3>
-<p>订阅由 Apple 管理，不在本 App 内取消：打开<strong>「设置」→ 点最上方你的名字 → 订阅</strong>，选择「实时翻译字幕」后取消。终身解锁是一次性买断，不会续订，无需取消。</p>
-
-<h3>没有字幕出来？</h3>
+<p><strong>Audio with no picture</strong></p>
 <ul>
-  <li>先看 App 主界面大按钮上方那行状态文字——卡在哪一步它会写出来（模型还在下载、语言包还没装好、音频没在共享）。没有那行字就说明没什么要你处理的。</li>
-  <li>确认视频<strong>没有静音</strong>，且音量不是最小。</li>
-  <li>确认状态栏有<strong>红色录制指示</strong>，代表音频确实在共享。</li>
-  <li>换过「视频语言」之后<strong>必须重新开始共享音频</strong>才生效；字幕语言可以随时换。</li>
-  <li>某些语言组合这台设备可能不支持，App 会直接提示你换一种组合。</li>
+  <li>Foreign-language podcasts, audiobooks, interviews — there is no video involved; it works on sound</li>
 </ul>
 
-<h3>联系</h3>
-<p>问题、建议、报 bug：<a href="mailto:livecaptiondev@gmail.com">livecaptiondev@gmail.com</a></p>
+<p><strong>Study and work</strong></p>
+<ul>
+  <li>Online courses, lectures and talks in another language</li>
+  <li>Online meetings and briefings in another language</li>
+</ul>
 
-<h2>English</h2>
+<p><strong>What it does:</strong> it turns the audio another app is playing into text, translates it, and floats the subtitles above whatever you are watching. You do not leave the app you are in, and you do not need a subtitle file.</p>
 
-<h3>Requirements</h3>
+<p><strong>What it does not do</strong> (these get mixed up a lot):</p>
+<ul>
+  <li>It is not a video editor that burns subtitles into videos you shot yourself</li>
+  <li>It does not download, store or export any video or audio</li>
+  <li>It does not translate text on web pages or in images — it works on sound</li>
+  <li>It does not work on a Mac: the iOS screen-sharing mechanism is not available on macOS</li>
+</ul>
+
+<h3>What you need</h3>
 <ul>
   <li>iPhone running iOS 26 or later</li>
   <li>A network connection the first time you use a language, to download its model once. Fully offline afterwards.</li>
 </ul>
 
-<h3>How to use it</h3>
+<h3>How to put subtitles on video playing in another app</h3>
 <ol>
   <li><strong>Pick your languages.</strong> The two menus are the language being spoken and the language you want subtitles in.</li>
-  <li><strong>Tap the round button in the middle, "Start Sharing Audio".</strong> iOS shows <strong>its own Screen Sharing sheet</strong> — tap Start Sharing there. It is the only way an app can receive audio from other apps on iOS.</li>
+  <li><strong>Tap the round button in the middle, "Start Sharing Audio".</strong> iOS shows its own <strong>Screen Sharing sheet</strong> — tap Start Sharing there. It is the only way an app can receive audio from other apps on iOS.</li>
   <li><strong>Wait for the subtitle window to float up on its own</strong>, then switch to the browser or app playing your video. The subtitles keep updating in the floating window, which you can drag and resize.</li>
 </ol>
 <div class="note">
-  <p>You don't open the window yourself: the app opens it for you once the audio share is actually running. The window has nothing to show until audio is reaching it, which is why that order is fixed.</p>
-  <p>If the system closes the window — iOS allows only one Picture in Picture at a time, so another app starting its own takes yours over, and changing the subtitle language closes it too — the audio share carries on, and the app's button becomes <strong>Open Subtitle Window</strong>. One tap brings it back.</p>
+<p>You don't open the window yourself: the app opens it for you once the audio share is actually running. The window has nothing to show until audio is reaching it, which is why that order is fixed.</p>
+<p>If the system closes the window — iOS allows only one Picture in Picture at a time, so another app starting its own takes yours over — the audio share carries on, and the app's button becomes Open Subtitle Window. One tap brings it back.</p>
 </div>
 
-<h3>The three subtitle styles</h3>
-<p>Under the language menus is <strong>Subtitle Style</strong>: Short, Long and Slim, drawn as the shapes of the three floating windows. <strong>Long, in the middle, is the default</strong>: it shows the original sentence together with its translation, while the other two show the translation only. Once you change it, the app remembers your choice. <strong>The style can't be changed while the window is open</strong> — that row is dimmed, so close the window first.</p>
+<h3>Which of the three subtitle styles to use</h3>
+<p>Under the language menus is Subtitle Style: Short, Long and Slim, drawn as the shapes of the three floating windows. Long, in the middle, is the default: it shows the original sentence together with its translation, while the other two show the translation only. Once you change it, the app remembers your choice. The style can't be changed while the window is open — that row is dimmed, so close the window first.</p>
 
-<h3>Free sessions and purchases</h3>
+<h3>How the free sessions work, and how to remove the limit</h3>
 <ul>
-  <li>A new install gets <strong>3 free captioning sessions</strong>, and <strong>one more every week</strong> after those run out.</li>
-  <li><strong>A session only counts once captions actually appear</strong> — opening the window by mistake and closing it costs nothing.</li>
-  <li>A session is <strong>never cut short</strong>. Watch for as long as you like; it stays one session.</li>
+  <li>A new install gets 3 free captioning sessions, and one more every week after those run out.</li>
+  <li>A session only counts once captions actually appear — opening the window by mistake and closing it costs nothing.</li>
+  <li>A session is never cut short. Watch for as long as you like; it stays one session.</li>
   <li>To remove the limit, the app offers a monthly subscription, a yearly subscription, or a one-time lifetime unlock.</li>
 </ul>
 
-<h3>New phone, or reinstalled the app</h3>
-<p>Tap the gear in the top right of the app to open <strong>Settings</strong>, then tap <strong>Restore Purchases</strong>, signed in with the same Apple Account you bought with.</p>
+<h3>New phone, or reinstalled the app — restoring what you bought</h3>
+<p>Tap the gear in the top right of the app to open Settings, then tap Restore Purchases, signed in with the same Apple Account you bought with.</p>
 
 <h3>Cancelling a subscription</h3>
-<p>Subscriptions are managed by Apple, not inside this app: open <strong>Settings → tap your name at the top → Subscriptions</strong>, then select Realtime Subtitles and cancel. The lifetime unlock is a one-time purchase, never renews, and needs no cancelling.</p>
+<p>Subscriptions are managed by Apple, not inside this app: open Settings &rarr; tap your name at the top &rarr; Subscriptions, then select Realtime Subtitles and cancel. The lifetime unlock is a one-time purchase, never renews, and needs no cancelling.</p>
 
-<h3>No subtitles appearing?</h3>
+<h3>No subtitles appearing — how to check</h3>
 <ul>
   <li>Check the line of status text above the big button on the app's main screen — it names whichever stage is pending (model downloading, language pack not installed, audio not being shared). No line there means there is nothing for you to do.</li>
-  <li>Make sure the video is <strong>not muted</strong> and the volume is up.</li>
-  <li>Look for the <strong>red recording indicator</strong> in the status bar, which means audio really is being shared.</li>
-  <li>Changing the spoken language <strong>requires starting audio sharing again</strong>. The subtitle language can be changed at any time.</li>
+  <li>Make sure the video is not muted and the volume is up.</li>
+  <li>Look for the red recording indicator in the status bar, which means audio really is being shared.</li>
+  <li>Changing the spoken language requires starting audio sharing again. The subtitle language can be changed at any time.</li>
+  <li>Recognition works from sound, so heavy background music or several people talking at once will noticeably reduce accuracy.</li>
   <li>Some language combinations aren't available on a given device; the app will tell you and ask you to pick another.</li>
 </ul>
 
 <h3>Contact</h3>
 <p>Questions, suggestions, bug reports: <a href="mailto:livecaptiondev@gmail.com">livecaptiondev@gmail.com</a></p>
-
-<footer><a href="privacy.html">隐私政策 / Privacy Policy</a></footer>
+<footer><a href="privacy.html">Privacy Policy</a></footer>
 
 </body>
 </html>

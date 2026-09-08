@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>실시간 번역 자막 · 다른 앱 소리에 실시간 자막 — 사용법과 지원</title>
+<meta name="description" content="iPhone에서 다른 앱이 재생 중인 영상·라이브 방송·팟캐스트에 실시간 번역 자막을 띄웁니다. 자막이 맨 위에 떠 있어 보던 앱을 벗어날 필요가 없습니다. 인식과 번역 모두 기기 안에서 처리됩니다. iOS 26 이상이 필요합니다.">
+<link rel="alternate" hreflang="en" href="https://claudwang.github.io/livecaption/">
+<link rel="alternate" hreflang="zh-Hans" href="https://claudwang.github.io/livecaption/zh.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://claudwang.github.io/livecaption/zh-hant.html">
+<link rel="alternate" hreflang="ja" href="https://claudwang.github.io/livecaption/ja.html">
+<link rel="alternate" hreflang="ko" href="https://claudwang.github.io/livecaption/ko.html">
+<link rel="alternate" hreflang="es" href="https://claudwang.github.io/livecaption/es.html">
+<link rel="alternate" hreflang="pt" href="https://claudwang.github.io/livecaption/pt.html">
+<link rel="alternate" hreflang="x-default" href="https://claudwang.github.io/livecaption/">
+<style>
+  :root { color-scheme: light dark; --fg:#1c1c1e; --dim:#6c6c70; --bg:#fff; --line:#e5e5ea; --accent:#0a84ff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#f2f2f7; --dim:#9b9ba0; --bg:#000; --line:#2c2c2e; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; padding: 40px 22px 80px; max-width: 46rem;
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--fg); background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+  }
+  h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 .15em; letter-spacing: -.02em; }
+  h2 { font-size: 1.35rem; margin: 2.4em 0 .6em; padding-top: 1.2em; border-top: 1px solid var(--line); }
+  h3 { font-size: 1.06rem; margin: 1.8em 0 .4em; }
+  p, li { margin: .7em 0; }
+  ul, ol { padding-left: 1.3em; }
+  a { color: var(--accent); }
+  .tagline { font-size: 1.15rem; color: var(--dim); margin: 0 0 1.6em; }
+  .langbar { font-size: .92rem; color: var(--dim); margin: 0 0 2.2em; padding-bottom: 1.2em; border-bottom: 1px solid var(--line); }
+  .langbar a { margin-right: .9em; white-space: nowrap; }
+  .langbar strong { margin-right: .9em; color: var(--fg); font-weight: 600; }
+  .note {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    border-radius: 10px; padding: .9em 1.1em; margin: 1.4em 0;
+  }
+  .note p:first-child { margin-top: 0; } .note p:last-child { margin-bottom: 0; }
+  footer { margin-top: 4em; padding-top: 1.5em; border-top: 1px solid var(--line); color: var(--dim); font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<h1>실시간 번역 자막</h1>
+<p class="tagline">다른 앱에서 재생 중인 소리에 실시간 자막을 맨 위에 띄웁니다.</p>
+<p class="langbar"><a href="index.html">English</a><a href="zh.html">简体中文</a><a href="zh-hant.html">繁體中文</a><a href="ja.html">日本語</a><strong>한국어</strong><a href="es.html">Español</a><a href="pt.html">Português</a></p>
+<h3>이럴 때 씁니다</h3>
+
+<p><strong>자막 없는 영상을 볼 때</strong></p>
+<ul>
+  <li>일드·중드·애니의 자막 없는 원본 영상</li>
+  <li>YouTube나 Safari에서 보는 외국어 영상에 읽을 수 있는 자막이 없을 때</li>
+</ul>
+
+<p><strong>라이브 방송 — 이런 콘텐츠에는 자막이 붙을 수 없습니다</strong></p>
+<ul>
+  <li>덕질: 아이돌 라이브, 스트리머 생방송. 누구도 미리 자막을 만들어 둘 수 없습니다</li>
+  <li>스포츠 중계, 발표회, 라이브 커머스</li>
+  <li>라이브는 지금 일어나는 일입니다. <strong>어떤 자막 팀도 미리 준비할 수 없다</strong>는 점이 다시보기 콘텐츠와의 결정적인 차이입니다</li>
+</ul>
+
+<p><strong>화면 없이 소리만 있는 콘텐츠</strong></p>
+<ul>
+  <li>외국어 팟캐스트, 오디오북, 인터뷰. 화면은 상관없습니다. 다루는 것은 소리입니다</li>
+</ul>
+
+<p><strong>공부와 업무</strong></p>
+<ul>
+  <li>외국어 온라인 강의, 공개 강좌, 학술 강연</li>
+  <li>외국어 온라인 회의와 설명회</li>
+</ul>
+
+<p><strong>하는 일:</strong> 다른 앱이 재생 중인 소리를 실시간으로 글자로 바꾸고 번역해서, 보고 있는 화면 위에 자막을 띄웁니다. 보던 앱을 벗어날 필요도, 자막 파일을 미리 준비할 필요도 없습니다.</p>
+
+<p><strong>하지 않는 일</strong> (자주 혼동되는 부분입니다):</p>
+<ul>
+  <li>직접 찍은 영상에 자막을 입히는 편집 앱이 아닙니다</li>
+  <li>영상이나 음성을 내려받거나 저장하거나 내보내지 않습니다</li>
+  <li>웹페이지나 이미지의 글자는 번역하지 않습니다. 다루는 것은 소리뿐입니다</li>
+  <li>Mac에서는 쓸 수 없습니다. iOS의 화면 공유 방식이 macOS에는 없기 때문입니다</li>
+</ul>
+
+<h3>필요한 기기와 시스템</h3>
+<ul>
+  <li>iPhone, iOS 26 이상</li>
+  <li>특정 언어를 처음 쓸 때만 모델을 한 번 내려받기 위한 네트워크 연결이 필요하고, 그 뒤로는 완전히 오프라인으로 동작합니다</li>
+</ul>
+
+<h3>다른 앱의 영상에 실시간 자막을 띄우는 방법</h3>
+<ol>
+  <li><strong>언어를 고릅니다.</strong> 위의 두 메뉴는 각각 &lsquo;말하고 있는 언어&rsquo;와 &lsquo;자막으로 볼 언어&rsquo;입니다.</li>
+  <li><strong>가운데 둥근 버튼 &lsquo;소리 공유 시작&rsquo;을 누릅니다.</strong> iOS가 <strong>시스템 시트</strong>를 띄우면 거기서 &lsquo;공유 시작&rsquo;을 누릅니다. iOS에서 다른 앱의 소리를 받을 수 있는 방법은 이것뿐입니다.</li>
+  <li><strong>자막 창이 스스로 떠오를 때까지 기다린 뒤</strong>, 영상을 재생할 브라우저나 앱으로 전환합니다. 자막은 떠 있는 창에서 계속 갱신되고, 창은 끌거나 크기를 바꿀 수 있습니다.</li>
+</ol>
+<div class="note">
+<p>창은 직접 열지 않아도 됩니다. 소리 공유가 실제로 시작되면 앱이 열어 줍니다. 소리가 들어오기 전에는 보여 줄 내용이 없기 때문에 이 순서는 고정입니다.</p>
+<p>시스템이 창을 닫았다면 — iOS는 동시에 하나의 PIP만 허용하므로 다른 앱이 자기 PIP를 열면 뺏깁니다 — 소리 공유는 계속되고 있고, 버튼이 &lsquo;자막 창 열기&rsquo;로 바뀝니다. 한 번 누르면 돌아옵니다.</p>
+</div>
+
+<h3>세 가지 자막 스타일 고르기</h3>
+<p>언어 메뉴 아래가 &lsquo;자막 스타일&rsquo;입니다. 짧은 문장, 긴 문장, 슬림 세 가지이고, 각각 떠 있는 창의 모양을 그대로 그린 것입니다. 기본값은 가운데의 긴 문장으로, 원문과 번역을 함께 보여 줍니다. 나머지 둘은 번역만 보여 줍니다. 한 번 바꾸면 선택이 기억됩니다. 창이 열려 있는 동안에는 스타일을 바꿀 수 없어 그 줄이 흐려집니다. 창을 먼저 닫으세요.</p>
+
+<h3>무료 횟수 계산 방식과 제한 해제</h3>
+<ul>
+  <li>새로 설치하면 무료 자막 3회가 주어지고, 다 쓰면 매주 1회씩 추가됩니다.</li>
+  <li>자막이 실제로 나타나야 1회로 셉니다. 실수로 창을 열었다 닫는 것은 차감되지 않습니다.</li>
+  <li>시작된 세션이 도중에 끊기는 일은 없습니다. 아무리 오래 봐도 한 번입니다.</li>
+  <li>제한을 없애려면 월간 구독, 연간 구독, 또는 한 번만 결제하는 평생 해제 중에서 고를 수 있습니다.</li>
+</ul>
+
+<h3>기기를 바꾸거나 앱을 다시 설치했을 때 구매 복원</h3>
+<p>앱 오른쪽 위 톱니바퀴로 설정을 열고 &lsquo;구매 복원&rsquo;을 누르세요. 구매할 때 쓴 것과 같은 Apple 계정으로 로그인되어 있어야 합니다.</p>
+
+<h3>구독 해지</h3>
+<p>구독은 Apple이 관리하며 앱 안에서는 해지할 수 없습니다. &lsquo;설정&rsquo; &rarr; 맨 위의 본인 이름 &rarr; 구독 에서 해당 항목을 선택해 해지하세요. 평생 해제는 한 번만 결제하는 방식이라 갱신되지 않고 해지할 필요도 없습니다.</p>
+
+<h3>자막이 안 나올 때 확인할 것</h3>
+<ul>
+  <li>먼저 메인 화면 큰 버튼 위의 상태 문구를 보세요. 어느 단계에서 멈췄는지 (모델 내려받는 중, 언어 팩 미설치, 소리가 공유되지 않음) 적혀 있습니다. 아무 문구도 없다면 따로 하실 일은 없습니다.</li>
+  <li>영상이 음소거는 아닌지, 볼륨이 최소는 아닌지 확인하세요.</li>
+  <li>상태 표시줄에 빨간 녹화 표시가 있으면 소리가 실제로 공유되고 있는 것입니다.</li>
+  <li>&lsquo;말하고 있는 언어&rsquo;를 바꿨다면 소리 공유를 다시 시작해야 적용됩니다. 자막 언어는 언제든 바꿀 수 있습니다.</li>
+  <li>인식은 소리를 기준으로 하므로 배경 음악이 크거나 여러 사람이 동시에 말하면 정확도가 뚜렷하게 떨어집니다.</li>
+  <li>기기에 따라 지원되지 않는 언어 조합이 있습니다. 그럴 때는 앱이 다른 조합을 고르도록 안내합니다.</li>
+</ul>
+
+<h3>문의</h3>
+<p>질문, 제안, 버그 제보: <a href="mailto:livecaptiondev@gmail.com">livecaptiondev@gmail.com</a></p>
+<footer><a href="privacy.html">개인정보 처리방침</a></footer>
+
+</body>
+</html>

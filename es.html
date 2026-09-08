@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subtítulos en vivo traducidos · para el audio de otras apps — Guía y soporte</title>
+<meta name="description" content="Pon subtítulos traducidos en tiempo real sobre vídeos, directos y pódcast que se reproducen en otras apps del iPhone. Los subtítulos flotan encima, así no sales de la app que estás viendo. El reconocimiento y la traducción se hacen en el dispositivo. Requiere iOS 26 o posterior.">
+<link rel="alternate" hreflang="en" href="https://claudwang.github.io/livecaption/">
+<link rel="alternate" hreflang="zh-Hans" href="https://claudwang.github.io/livecaption/zh.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://claudwang.github.io/livecaption/zh-hant.html">
+<link rel="alternate" hreflang="ja" href="https://claudwang.github.io/livecaption/ja.html">
+<link rel="alternate" hreflang="ko" href="https://claudwang.github.io/livecaption/ko.html">
+<link rel="alternate" hreflang="es" href="https://claudwang.github.io/livecaption/es.html">
+<link rel="alternate" hreflang="pt" href="https://claudwang.github.io/livecaption/pt.html">
+<link rel="alternate" hreflang="x-default" href="https://claudwang.github.io/livecaption/">
+<style>
+  :root { color-scheme: light dark; --fg:#1c1c1e; --dim:#6c6c70; --bg:#fff; --line:#e5e5ea; --accent:#0a84ff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#f2f2f7; --dim:#9b9ba0; --bg:#000; --line:#2c2c2e; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; padding: 40px 22px 80px; max-width: 46rem;
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--fg); background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+  }
+  h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 .15em; letter-spacing: -.02em; }
+  h2 { font-size: 1.35rem; margin: 2.4em 0 .6em; padding-top: 1.2em; border-top: 1px solid var(--line); }
+  h3 { font-size: 1.06rem; margin: 1.8em 0 .4em; }
+  p, li { margin: .7em 0; }
+  ul, ol { padding-left: 1.3em; }
+  a { color: var(--accent); }
+  .tagline { font-size: 1.15rem; color: var(--dim); margin: 0 0 1.6em; }
+  .langbar { font-size: .92rem; color: var(--dim); margin: 0 0 2.2em; padding-bottom: 1.2em; border-bottom: 1px solid var(--line); }
+  .langbar a { margin-right: .9em; white-space: nowrap; }
+  .langbar strong { margin-right: .9em; color: var(--fg); font-weight: 600; }
+  .note {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    border-radius: 10px; padding: .9em 1.1em; margin: 1.4em 0;
+  }
+  .note p:first-child { margin-top: 0; } .note p:last-child { margin-bottom: 0; }
+  footer { margin-top: 4em; padding-top: 1.5em; border-top: 1px solid var(--line); color: var(--dim); font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<h1>Subtítulos en vivo traducidos</h1>
+<p class="tagline">Subtítulos traducidos en tiempo real para el audio que suena en otras apps, flotando encima.</p>
+<p class="langbar"><a href="index.html">English</a><a href="zh.html">简体中文</a><a href="zh-hant.html">繁體中文</a><a href="ja.html">日本語</a><a href="ko.html">한국어</a><strong>Español</strong><a href="pt.html">Português</a></p>
+<h3>Cuándo te sirve</h3>
+
+<p><strong>Cuando ves algo que no tiene subtítulos</strong></p>
+<ul>
+  <li>Series y animación en versión original, sin ningún subtítulo</li>
+  <li>Vídeo en otro idioma en YouTube o en Safari, sin subtítulos en un idioma que leas</li>
+</ul>
+
+<p><strong>Directos: este tipo de contenido nunca puede llevar subtítulos</strong></p>
+<ul>
+  <li>Directos de artistas y creadores: nadie puede subtitularlos por adelantado</li>
+  <li>Narración deportiva, presentaciones, ventas en directo</li>
+  <li>Un directo ocurre mientras ocurre. <strong>Ningún equipo de subtitulado puede adelantarse</strong>, y eso es lo que lo separa de cualquier contenido bajo demanda.</li>
+</ul>
+
+<p><strong>Audio sin imagen</strong></p>
+<ul>
+  <li>Pódcast, audiolibros y entrevistas en otro idioma. No hace falta vídeo: funciona con el sonido</li>
+</ul>
+
+<p><strong>Estudio y trabajo</strong></p>
+<ul>
+  <li>Cursos en línea, clases y charlas en otro idioma</li>
+  <li>Reuniones y presentaciones en línea en otro idioma</li>
+</ul>
+
+<p><strong>Lo que hace:</strong> convierte en texto el audio que está reproduciendo otra app, lo traduce y deja los subtítulos flotando sobre lo que estés viendo. No sales de la app en la que estás y no necesitas ningún archivo de subtítulos.</p>
+
+<p><strong>Lo que no hace</strong> (esto se confunde a menudo):</p>
+<ul>
+  <li>No es un editor de vídeo que incruste subtítulos en los vídeos que grabas tú</li>
+  <li>No descarga, guarda ni exporta ningún vídeo ni audio</li>
+  <li>No traduce el texto de páginas web ni de imágenes: trabaja con el sonido</li>
+  <li>No funciona en Mac: el mecanismo de compartir pantalla de iOS no existe en macOS</li>
+</ul>
+
+<h3>Qué necesitas</h3>
+<ul>
+  <li>iPhone con iOS 26 o posterior</li>
+  <li>Conexión la primera vez que usas un idioma, para descargar su modelo una sola vez. Después funciona totalmente sin conexión.</li>
+</ul>
+
+<h3>Cómo poner subtítulos al vídeo que suena en otra app</h3>
+<ol>
+  <li><strong>Elige los idiomas.</strong> Los dos menús son el idioma que se habla y el idioma en el que quieres los subtítulos.</li>
+  <li><strong>Toca el botón redondo del centro, «Compartir audio».</strong> iOS mostrará <strong>su propio panel del sistema</strong>; confírmalo ahí. Es la única forma que tiene una app de recibir el audio de otras apps en iOS.</li>
+  <li><strong>Espera a que la ventana de subtítulos aparezca sola</strong> y cambia al navegador o a la app que reproduce el vídeo. Los subtítulos se actualizan en la ventana flotante, que puedes mover y redimensionar.</li>
+</ol>
+<div class="note">
+<p>No tienes que abrir la ventana: la app la abre cuando la compartición de audio está realmente en marcha. Hasta que no llega sonido no hay nada que mostrar, por eso el orden es fijo.</p>
+<p>Si el sistema cierra la ventana —iOS solo permite una imagen sobre imagen a la vez, así que otra app que abra la suya te la quita—, la compartición de audio sigue y el botón pasa a ser «Abrir ventana de subtítulos». Un toque y vuelve.</p>
+</div>
+
+<h3>Cuál de los tres estilos usar</h3>
+<p>Debajo de los menús de idioma está «Estilo de subtítulos»: Corto, Largo y Fino, dibujados con la forma de las tres ventanas flotantes. El predeterminado es Largo, en el centro: muestra la frase original junto con su traducción, mientras que los otros dos muestran solo la traducción. Una vez que lo cambias, la app recuerda tu elección. El estilo no se puede cambiar con la ventana abierta: esa fila aparece atenuada, así que cierra antes la ventana.</p>
+
+<h3>Cómo se cuentan las sesiones gratuitas y cómo quitar el límite</h3>
+<ul>
+  <li>Una instalación nueva incluye 3 sesiones de subtítulos gratuitas, y una más cada semana cuando se agotan.</li>
+  <li>Una sesión solo cuenta cuando los subtítulos aparecen de verdad: abrir la ventana por error y cerrarla no gasta nada.</li>
+  <li>Una sesión nunca se corta a la mitad. Mira todo el tiempo que quieras: sigue siendo una sola sesión.</li>
+  <li>Para quitar el límite, la app ofrece suscripción mensual, suscripción anual o un desbloqueo de por vida de pago único.</li>
+</ul>
+
+<h3>Móvil nuevo o app reinstalada: restaurar lo que compraste</h3>
+<p>Toca la rueda dentada arriba a la derecha para abrir Ajustes y pulsa «Restaurar compras», con la misma cuenta de Apple con la que compraste.</p>
+
+<h3>Cancelar la suscripción</h3>
+<p>Las suscripciones las gestiona Apple, no se cancelan dentro de la app: abre Ajustes &rarr; toca tu nombre arriba del todo &rarr; Suscripciones, selecciona la app y cancela. El desbloqueo de por vida es un pago único, nunca se renueva y no hay nada que cancelar.</p>
+
+<h3>No aparecen subtítulos: qué comprobar</h3>
+<ul>
+  <li>Mira primero la línea de estado encima del botón grande en la pantalla principal: indica qué paso está pendiente (descargando el modelo, paquete de idioma sin instalar, audio sin compartir). Si no hay ninguna línea, no hay nada que tengas que hacer.</li>
+  <li>Comprueba que el vídeo no esté silenciado y que el volumen no esté al mínimo.</li>
+  <li>Busca el indicador rojo de grabación en la barra de estado: significa que el audio se está compartiendo de verdad.</li>
+  <li>Si cambias el idioma hablado, hay que volver a empezar a compartir audio. El idioma de los subtítulos se puede cambiar en cualquier momento.</li>
+  <li>El reconocimiento parte del sonido, así que con música de fondo alta o varias personas hablando a la vez la precisión baja de forma notable.</li>
+  <li>Algunas combinaciones de idiomas no están disponibles en un dispositivo concreto; la app te lo dirá y te pedirá que elijas otra.</li>
+</ul>
+
+<h3>Contacto</h3>
+<p>Dudas, sugerencias y errores: <a href="mailto:livecaptiondev@gmail.com">livecaptiondev@gmail.com</a></p>
+<footer><a href="privacy.html">Política de privacidad</a></footer>
+
+</body>
+</html>
